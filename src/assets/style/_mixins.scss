@@ -1,0 +1,10 @@
+@mixin full-page {
+  width: 100vw;
+  height: 100vh;
+}
+
+@mixin full-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

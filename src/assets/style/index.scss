@@ -1,0 +1,73 @@
+@import 'reset';
+@import 'variables';
+@import 'typography';
+@import 'base';
+// @import 'code';
+@import 'content-box';
+@import 'utils';
+@import 'mixins';
+@import 'simplegrid';
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.section {
+  padding-top: 100px;
+}
+
+.titles {
+  span, h1, a {
+    text-transform: uppercase;
+  }
+
+  span {
+    font-size: .9em;
+    color: rgba(0, 0, 0, .5);
+  }
+
+  h1 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: .8em;
+    margin: 16px 0;
+  }
+
+  a {
+    color: $primary;
+    font-weight: bold;
+    font-size: .8em;
+  }
+
+  &.center {
+    text-align: center;
+  }
+}
+
+.btn {
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 12px 32px;
+  border-radius: 50px;
+  background-color: white;
+  color: rgba(0, 0, 0, .65) !important;
+  transition: .5s;
+  box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+
+  &.btn-sm {
+    padding: 8px 16px;
+    font-size: .65em;
+  }
+
+  &:hover {
+    opacity: 1 !important;
+    color: $primary;
+    background-color: #e4e3e3;
+  }
+}
