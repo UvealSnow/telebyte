@@ -134,6 +134,7 @@
       color: white;
 
       h5 {
+        margin-top: 0;
         color: white;
       }
 
@@ -157,6 +158,7 @@
       .content__left,
       .content__right {
         display: inline-block;
+        vertical-align: top;
       }
 
       .content__left {
@@ -170,6 +172,7 @@
 
       .datum p {
         max-width: 550px;
+        font-size: .8em;
       }
     }
 

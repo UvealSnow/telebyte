@@ -58,7 +58,7 @@
   }
 
   .post__body {
-    padding: 40px 40px 0;
+    padding: 20px 20px 0;
   }
 
   .post__metadata {
@@ -96,8 +96,8 @@
   }
 
   .post__footer {
-    width: 70%;
-    padding: 16px 40px;
+    width: 90%;
+    padding: 16px 20px;
     position: relative;
     border-top: 1px solid rgba(0, 0, 0, .2);
 

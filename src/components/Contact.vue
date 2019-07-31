@@ -1,5 +1,5 @@
 <template>
-  <div class="container contact">
+  <div id="contacto" class="container contact">
     <div class="contact__left">
       <div class="titles">
         <h1>Envíanos <span>un mensaje</span></h1>

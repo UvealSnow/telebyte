@@ -1,10 +1,9 @@
 <template>
-  <div class="container section gallery">
+  <div id="galeria" class="container section gallery">
     <div class="titles">
       <span>Galería</span>
       <h1>Trabajos recientes</h1>
 
-      <!-- <p v-for="edge in $static.projects.edges" v-text="edge.node"></p> -->
       <div class="gallery__container">
         <GalleryItem v-for="edge in $static.projects.edges" :item="edge.node" :key="edge.node.id"/>
       </div>

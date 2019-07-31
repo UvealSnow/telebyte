@@ -6,8 +6,9 @@
           <g-image src="~/assets/images/telebyte-white.png"></g-image>
         </div>
 
-        <div class="hamburger">
-          <MenuIcon size="2x"/>
+        <div class="hamburger" @click="toggleNavbar">
+          <MenuIcon v-if="!is_open" size="2x"/>
+          <XIcon v-else size="2x" />
         </div>
 
         <div class="actions">
@@ -49,13 +50,53 @@
         </div>
       </div>
 
+      <div :class="`navbar-sm${is_open ? ' active' : ''}`">
+        <div class="actions">
+          <a href="#">
+            <div class="action">
+              <div class="action__icon">
+                <PhoneIncomingIcon/>
+              </div>
+              <div class="action__text">
+                <h5>Llámanos</h5>
+                <p>+52 (444) 198 2929</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="action">
+              <div class="action__icon">
+                <MailIcon/>
+              </div>
+              <div class="action__text">
+                <h5>Envíanos un correo</h5>
+                <p>hola@telebyte.mx</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="action">
+              <div class="action__icon">
+                <WatchIcon/>
+              </div>
+              <div class="action__text">
+                <h5>Horario de atención</h5>
+                <p>Lun-Vie 8:00am ~ 6:00pm</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
       <div class="navbar__white">
         <div class="links">
-          <a to="/">Inicio</a>
-          <a to="#servicios">Servicios</a>
-          <a to="#galeria">Galería</a>
-          <a to="#testimonios">Testimonios</a>
-          <a to="#contacto">Contáctanos</a>
+          <!-- <a href="/">Inicio</a> -->
+          <a href="#servicios">Servicios</a>
+          <a href="#galeria">Galería</a>
+          <a href="#testimonios">Testimonios</a>
+          <a href="#contacto">Contáctanos</a>
         </div>
 
         <div class="icons">
@@ -75,7 +116,7 @@
 </template>
 
 <script type="text/javascript">
-  import { MenuIcon, FacebookIcon, TwitterIcon, LinkedinIcon, PhoneIncomingIcon, MailIcon, WatchIcon } from 'vue-feather-icons'
+  import { MenuIcon, FacebookIcon, TwitterIcon, LinkedinIcon, PhoneIncomingIcon, MailIcon, WatchIcon, XIcon } from 'vue-feather-icons'
 
   export default {
     data() {
@@ -91,6 +132,7 @@
     },
 
     components: {
+      XIcon,
       MenuIcon,
       MailIcon,
       WatchIcon,
@@ -121,6 +163,7 @@
         float: right;
         margin-top: 10px;
         display: none;
+        cursor: pointer;
 
         @media screen and (max-width: 959px) {
           display: inline-block;
@@ -246,6 +289,70 @@
             margin: 19px 25px;
             color: rgba(0, 0, 0, .35);
           }
+        }
+      }
+    }
+  }
+
+  .navbar-sm {
+    top: 100px;
+    left: -20px;
+    width: 100vw;
+    display: none;
+    position: absolute;
+    background-color: white;
+
+    &.active {
+      display: block;
+
+      .actions {
+        padding: 16px;
+        display: block;
+
+        @media screen and (min-width: 960px) {
+          display: inline-block;
+        }
+
+        a:not(:last-of-type) {
+          margin-right: 32px;
+          display: inline-block;
+        }
+      }
+
+      .action {
+        width: 100vw;
+        margin: 8px 0;
+        display: block;
+
+        .action__icon, .action__text {
+          display: inherit;
+        }
+
+        .action__icon {
+          float: left;
+          margin-right: 8px;
+        }
+
+        .action__text {
+          //
+        }
+
+        h5, p {
+          margin: 0;
+          color: black;
+          text-align: left;
+        }
+
+        h5 {
+          font-size: .9em;
+        }
+
+        p {
+          font-size: .8em;
+        }
+
+        svg {
+          color: $primary;
         }
       }
     }

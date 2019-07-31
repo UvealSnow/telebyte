@@ -1,5 +1,5 @@
 <template>
-  <div class="section container testimonies">
+  <div id="testimonios" class="section container testimonies">
     <div class="background"></div>
 
     <div class="testimony__slider">
